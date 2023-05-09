@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Web - Cursuri</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="./index.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link media="all" rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!--Navigare-->
+    <nav>
+        <img src="images/logo.png" id="logo">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa fas fa-times"></i>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="about.html">Despre noi</a></li>
+                <li><a href="course.html">Cursuri</a></li>
+                <li><a class="active" href="contact.html">Contacte</a></li>
+            </ul>
+            <img src="images/moon.png" id="icon">
+            <img id="menu-btn" src="images/menu2.png" alt="">
+        </div>
+    </nav>
+
+    <!--Sectiunea de contact-->
+
+    <section id="contact">
+        <div class="adress">
+            <h2> Contactează-ne</h2>
+
+            <div class="adress-details">
+
+                <h3>Adresă</h3>
+                <div>
+                    <i class="fa far fa-home get"></i>
+                    <p>Strada Aștrilor nr. 20, <br>Timișoara 300707 </p>
+                </div>
+
+
+                <h3>Telefon</h3>
+                <div>
+                    <i class="fa fa-solid fa-phone"></i>
+                    <p>(+40) 722-356-995 <br> (+40) 721-636-278 </p>
+                </div>
+
+
+                <h3>Email</h3>
+                <div>
+                    <i class="fa fa-solid fa-envelope"></i>
+                    <p>contact@innovateit.ro</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Sectiunea de final pagina-->
+        <div class="form">
+            <h3>Scrie un mesaj</h3>
+            <div class="form-row">
+                <input type="text" placeholder="Nume">
+                <input type="text" placeholder="Email">
+            </div>
+
+            <div class="form-col">
+                <input type="text" placeholder="Subiect">
+            </div>
+
+            <div class="form-col">
+                <textarea name="" id="" cols="30" rows="5" placeholder="Cum te putem ajuta?"></textarea>
+            </div>
+
+            <div class="form-col">
+                <button>Trimite mesaj</button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--Sectiunea de final-->
+    <footer>
+        <div class="copyright">
+            <div class="links">
+                <a href="https://www.facebook.com/"><i class="fa fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/"></a><i class="fa fa-brands fa-twitter"></i></a>
+                <a href="https://linkedin.com/"></a><i class="fa fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/"></a><i class="fa fa-brands fa-github"></i></a>
+            </div>
+            <h4>Copyright @2023 All rights reserved</h4>
+        </div>
+
+    </footer>
+
+    <!--JS pentru dark/light mode-->
+    <script>
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src = "images/sun.png";
+            }
+            else {
+                icon.src = "images/moon.png";
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

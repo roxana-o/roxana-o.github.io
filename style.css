@@ -1,0 +1,610 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: white; 
+  --secondary-color: white; 
+  --third-color: #101c32; 
+  --yellow: #d45500;
+  --wrong: #ff3860;
+  --correct: #09c372;
+}
+
+.dark-theme {
+  --primary-color: #101c32; 
+  --secondary-color: #a6a6a6; 
+  --third-color: #a6a6a6; 
+  --yellow: #d45500;
+  --wrong: #a6a6a6; 
+  --correct: #a6a6a6; 
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--primary-color);
+}
+
+nav {
+  width: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 8vw;
+  box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.15);
+}
+
+nav img {
+  width: 150px;
+  cursor: pointer;
+}
+
+nav .navigation {
+  display: flex;
+}
+
+#icon {
+  margin-left: 20px;
+  width: 30px;
+  cursor: pointer;
+}
+
+#menu-btn {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+#menu-close {
+  display: none;
+}
+
+nav .navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav .navigation ul li {
+  list-style: none;
+  margin-left: 40px;
+}
+
+nav .navigation ul li a {
+  text-decoration: none;
+
+  color: var(--third-color);
+  font-size: 17px;
+  font-weight: 800;
+  transition: 0.3s ease;
+}
+nav .navigation ul li a.active,
+nav .navigation ul li a:hover {
+  color: var(--yellow);
+}
+
+
+#inregistrare {
+  padding: 6vw 8vw 6vw 8vw;
+  background-image: linear-gradient(
+      rgba(76, 87, 138, 0.7),
+      rgba(56, 65, 179, 0.399)
+    ),
+    url("images/reg11.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  margin-top: 3px;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+Timp casete countdown
+*/
+p {
+  text-align: left;
+  font-size: 20px;
+  margin-top: -5px;
+}
+#clocks > div {
+  padding: 12px;
+  border-radius: 5px;
+  display: inline-block;
+  color: #101c32;
+  text-align: center;
+}
+#clocks div > span {
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  background-color: var(--second-color);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid #a6a6a6;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#inregistrare .timp {
+  color: var(--second-color);
+}
+#inregistrare .timp h4 {
+  margin-top: 30px;
+  color: var(--primary-color);
+}
+#inregistrare .timp h1 {
+  margin-top: 80px;
+  color: var(--primary-color);
+}
+
+#inregistrare .timp .casete {
+  display: flex;
+  margin-top: 20px;
+}
+
+#inregistrare .timp .casete .data {
+  text-align: center;
+  padding: 13px 33px;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 10px;
+  margin: 0 5px 10px 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#inregistrare .container {
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+#inregistrare .container h3 {
+  margin-bottom: 10px;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  color: var(--third-color);
+}
+
+.input-control input {
+  border: 2px solid #f0f0f0;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: var(--correct);
+}
+
+.input-control.error input {
+  border-color: var(--wrong);
+}
+
+.input-control .error {
+  color: var(--wrong);
+  font-size: 9px;
+  height: 13px;
+}
+
+#form h3 {
+  color: var(--third-color);
+}
+#form button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+#form button:hover {
+  color: rgb(21, 21, 100);
+  background: #fff;
+}
+
+#inregistrare .container .btn {
+  margin-top: 20px;
+}
+
+#inregistrare .container a.galben {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 13px 35px;
+  background-color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  color: white;
+  background: #f8da43;
+  transition: 0.3s ease;
+}
+
+#inregistrare .container a.galben:hover {
+  color: rgb(21, 21, 100);
+  background: #fff;
+}
+
+#beneficii {
+  padding: 5vw, 8vw, 0 8vw;
+  text-align: center;
+  margin: 50px 50px 50px 50px;
+}
+
+#beneficii h1 {
+  color: var(--third-color);
+}
+
+#beneficii .fea-base {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#beneficii .fea-box {
+  background: var(--secondary-color);
+  text-align: start;
+}
+
+#beneficii .fea-box i {
+  font-size: 2.3rem;
+  color: rgb(44, 44, 80);
+  text-align: center;
+}
+
+#beneficii .fea-box h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(46, 46, 59);
+  padding: 13px 0 7px 0;
+}
+
+#beneficii .fea-box p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(70, 40, 87);
+}
+
+footer {
+  text-align: center;
+  padding: 0.7vw;
+  background-color: #101c32;
+}
+
+footer .copyright {
+  color: #ffffffe8;
+  margin-top: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+footer .copyright a {
+  color: aliceblue;
+}
+
+footer .copyright .links i {
+  margin-bottom: 6px;
+  text-align: center;
+  padding: 10px 13px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+footer .copyright .links i:hover {
+  background: rgb(168, 168, 239);
+  color: white;
+  cursor: pointer;
+}
+/*************************************************Despre Noi*****************************************/
+
+#about-container {
+  display: flex;
+  align-items: center;
+  padding: 8vw 8vw 2vw 8vw;
+}
+
+#about-container img {
+  width: 60% !important;
+  padding-right: 10px;
+}
+
+#about-container .about-text {
+  width: 100%;
+  color: var(--third-color);
+}
+
+#about-container .about-text h3 {
+  color: var(--yellow);
+}
+#about-container .about-text h5 {
+  color: var(--yellow);
+}
+
+.about-benef {
+  padding-top: 20px;
+}
+
+/********************************Cursuri****************************/
+
+#course {
+  padding: 8vw 8vw 0 8vw;
+  text-align: center;
+}
+
+#course h1 {
+  color: var(--yellow);
+}
+
+#course .course-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 50px;
+}
+
+#course .courses {
+  text-align: start;
+  background: #f0f0f05a;
+  height: 100%;
+  position: relative;
+}
+
+#course .courses img {
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+#course .courses .details {
+  padding: 15px 15px 0 15px;
+}
+
+#course .courses .details i {
+  color: var(--yellow);
+  font-size: 0.9rem;
+}
+
+#course .courses .cost {
+  background-color: var(--yellow);
+  color: white;
+  line-height: 70px;
+  width: 80px;
+  height: 70px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  bottom: 100px;
+}
+
+/*********************************************Contacte***********************************/
+
+#contact {
+  padding: 8vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: rgba(255, 255, 255, 0.048);
+}
+
+#contact .adress {
+  width: 350px;
+}
+
+#contact .adress h2 {
+  color: var(--yellow);
+  line-height: 0.8;
+  margin-bottom: 40px;
+}
+
+#contact .adress p {
+  color: var(--third-color);
+  line-height: 24px;
+  margin-bottom: 33px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e5e4ed;
+}
+
+#contact .adress .adress-details div {
+  display: flex;
+}
+
+#contact .adress-details {
+  color: var(--third-color);
+}
+
+#contact .form {
+  width: 60%;
+  background: #f0f0f02d;
+  padding: 0 10px 10px 10px;
+  border-radius: 10px;
+}
+
+#contact .form h3 {
+  color: var(--third-color);
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+
+#contact .form .form-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#contact .form .form-row input {
+  width: 48%;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 3px;
+  border: none;
+  background: #ffffff7c;
+  color: #7e7c87;
+  outline: none;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+
+#contact .form .form-col input,
+#contact .form .form-col textarea {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 3px;
+  border: none;
+  background: #ffffff7c;
+  color: #7e7c87;
+  outline: none;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+
+#contact .form button {
+  font-size: 0.9rem;
+  padding: 13px 25px;
+  background: var(--yellow);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+/**********************************Responsive*****************************/
+
+@media (max-width: 769px) {
+  nav {
+    padding: 15px 20px;
+  }
+  nav img {
+    width: 130px;
+  }
+
+  #menu-btn {
+    display: initial;
+  }
+
+  #menu-close {
+    display: initial;
+    font-size: 1.6rem;
+    color: white;
+    padding: 30px 0 20px 20px;
+  }
+  nav .navigation ul {
+    position: absolute;
+    top: 0;
+    right: -220px;
+    width: 220px;
+    height: 100vh;
+    background-color: rgba(17, 20, 104, 0.54);
+    backdrop-filter: blur(4.5px);
+    border: 1px solid rgb(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: 0.3s ease;
+  }
+
+  nav .navigation ul.active {
+    right: 0;
+  }
+
+  nav .navigation ul li {
+    padding: 20px 0 20px 40px;
+    margin-left: 0;
+  }
+  nav .navigation ul li a {
+    color: white;
+  }
+  #inregistrare {
+    padding: 6vw 4vw 6vw 4vw;
+  }
+
+  #inregistrare .timp .casete {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  #beneficii {
+    padding: 5vw, 8vw, 0 8vw;
+    text-align: center;
+    margin: 50px 50px 50px 50px;
+  }
+}
+@media (max-width: 475px) {
+  #inregistrare .container {
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+
+  /*About*/
+  #about-container {
+    flex-direction: column;
+  }
+
+  #about-container img {
+    width: 100%;
+    padding-right: 30px;
+  }
+
+  /*Contact */
+
+  #contact {
+    padding: 8vw 4vw;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  #contact .form {
+    width: 100%;
+    padding: 40px 30px;
+  }
+
+  #contact .form .form-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  #contact .form .form-row input {
+    width: 100%;
+  }
+}

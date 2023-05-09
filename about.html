@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Web - Cursuri</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="./index.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link media="all" rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!--Navigare-->
+    <nav>
+        <img src="images/logo.png" id="logo" >
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa fas fa-times"></i>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a class="active" href="about.html">Despre noi</a></li>
+                <li><a href="course.html">Cursuri</a></li>
+                <li><a href="contact.html">Contacte</a></li>
+            </ul>
+            <img src="images/moon.png" id="icon">
+            <img id="menu-btn" src="images/menu2.png" alt="">
+        </div>
+    </nav>
+
+    <!--Sectiunea de informatii despre-->
+
+    <section id="about-container">
+        <div class="about-img" width=100px>
+            <img src="images/about_us.png" alt="">
+        </div>
+        <div class="about-text">
+            <h3>Cine suntem noi?</h3>
+            <h4>InnovateIT este o comunitate de oameni creativi, implicați, gata să te ajute să înveți programare, să te
+                dezvolți și să descoperi noi oportunități de carieră. Dispunem de cursuri în format fizic și online,
+                atât pentru începători, cât și pentru avansați.</h4>
+
+            <div class="about-benef">
+                <i class="fa fa-solid fa-star"></i>
+                <div class="benef-text">
+                    <h5>10 ani de activitate</h5>
+                    <h4>Povestea noastră a început acum 10 ani din dorința unor studenți de a împărtăși cunoștințele
+                        personale. Anii au trecut, InnovateIT a evoluat, dar și-a păstrat misiunea inițială: cea de
+                        promova știința și de a oferi sprijin persoanelor interesate de domeniul IT. </h4>
+                </div>
+            </div>
+
+            <div class="about-benef">
+                <i class="fa fa-solid fa-star"></i>
+                <div class="benef-text">
+                    <h5>30 de profesioniști</h5>
+                    <h4>Succesul InnovateIT se datorează oamenilor care muncesc și se dedică. Echipa noastră e compusă
+                        din persoane cu experiență, studii calificate și valori personale deosebite. </h4>
+                </div>
+            </div>
+
+            <div class="about-benef">
+                <i class="fa fa-solid fa-star"></i>
+                <div class="benef-text">
+                    <h5>2500 de absolvenți</h5>
+                    <h4>Fiecare persoană, chiar și după ce absolvește cursurile noastre, rămâne o parte din familie. Am
+                        fost și continuăm să fim alături de 2500 de absolvenți. Ne mândrim cu ei și ne bucurăm că au
+                        reușit să realizeze multe lucruri, aplicând cunoștințele acumulate la cursurile noastre. </h4>
+                </div>
+            </div>
+
+            <div class="about-benef">
+                <i class="fa fa-solid fa-star"></i>
+                <div class="benef-text">
+                    <h5>100% succes</h5>
+                    <h4>Persoanele care absolvesc cursurile noastre obțin un loc de muncă cu salariu atractiv sau
+                        evolueză și primesc beneficii la locul de muncă actual. </h4>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Sectiunea de final pagina-->
+
+    <footer>
+        <div class="copyright">
+            <div class="links">
+                <a href="https://www.facebook.com/"><i class="fa fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/"></a><i class="fa fa-brands fa-twitter"></i></a>
+                <a href="https://linkedin.com/"></a><i class="fa fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/"></a><i class="fa fa-brands fa-github"></i></a>
+            </div>
+            <h4>Copyright @2023 All rights reserved</h4>
+        </div>
+    </footer>
+
+    <!--JS pentru dark/light mode-->
+    <script>
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src = "images/sun.png";
+            }
+            else {
+                icon.src = "images/moon.png";
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

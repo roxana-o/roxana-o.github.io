@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Web - Cursuri</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="./index.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link media="all" rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!--Navigare-->
+    <nav>
+        <img src="images/logo.png" id="logo">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa fas fa-times"></i>
+                <li><a class="active" href="index.html">Acasă</a></li>
+                <li><a href="about.html">Despre noi</a></li>
+                <li><a href="course.html">Cursuri</a></li>
+                <li><a href="contact.html">Contacte</a></li>
+            </ul>
+            <img src="images/moon.png" id="icon">
+            <img id="menu-btn" src="images/menu2.png" alt="">
+        </div>
+    </nav>
+
+
+    <!--Sectiunea de inregistrare-->
+    <section id="inregistrare">
+        <div class="timp">
+            <h4>Sărbătorește împreună cu noi 10 ani de activitate.<br>Înregistrează-te pentru a primi pe adresa de email
+                10 cursuri GRATUITE.</h4>
+            <h1>Grăbește-te!</h1>
+
+            <div id="clocks">
+                <div>
+                    <span class="days_value" id="day_value"></span>
+                    <div class="small">Zile</div>
+                </div>
+                <div>
+                    <span class="hours_value" id="hour_value"></span>
+                    <div class="small">Ore</div>
+                </div>
+                <div>
+                    <span class="minutes_value" id="minute_value"></span>
+                    <div class="small">Min</div>
+                </div>
+                <div>
+                    <span class="seconds_value" id="second_value"></span>
+                    <div class="small">Sec</div>
+                </div>
+            </div>
+            <p id="demo_value"></p>
+        </div>
+
+        <!-- ****************************************   FORMULAR *****************************-->
+        <div class="container">
+            <form id="form" action="/">
+                <h3>Creează un cont acum!</h3>
+                <div class="input-control">
+                    <label for="username">Utilizator</label>
+                    <input id="username" name="username" type="text">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="text">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="password">Parolă</label>
+                    <input id="password" name="password" type="password">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="password2">Confirmare parolă</label>
+                    <input id="password2" name="password2" type="password">
+                    <div class="error"></div>
+                </div>
+
+                <button type="submit">Trimite</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!--Beneficii-->
+    <section id="beneficii">
+        <h1>De ce să alegi cursurile noastre?</h1>
+        <div class="fea-base">
+            <div class="fea-box">
+                <i class="fa fa-solid fa-puzzle-piece"></i>
+                <h3>EXPERIENȚĂ</h3>
+                <p>De 10 ani ajutăm oamenii să acumuleze cunoștinte utile. Sute de foști cursanți, angajați deja în
+                    domeniu, ne recomandă ca fiind alegerea ideală pentru oricine dorește să învețe IT.</p>
+            </div>
+            <div class="fea-box">
+                <i class="fa fa-solid fa-users"></i>
+                <h3>ECHIPĂ PERFECTĂ</h3>
+                <p>Echipa noastră e dedicată. Suntem deschiși la tot ce este nou și inovativ, apți din punct de vedere
+                    profesional și dispuși să-ți oferim tot ajutorul de care ai nevoie pentru ca să reușești.</p>
+            </div>
+            <div class="fea-box">
+                <i class="fa fa-solid fa-star"></i>
+                <h3>DIPLOMĂ ACREDITATĂ</h3>
+                <p>În urma cursurilor, primești o diplomă acreditată eliberată de Ministerul Educației și Cercetării.
+                    Diploma este acceptată și valabilă atât în Uniunea Europeană, cât și în SUA.</p>
+            </div>
+            <div class="fea-box">
+                <i class="fa fa-solid fa-folder-open"></i>
+                <h3>PROIECTE PRACTICE</h3>
+                <p>Tot ce se va preda se va implementa practic cu ajutorul trainerului. Astfel, vei avea un portofoliu
+                    cu proiecte pe care să îl prezinți angajatorului și vei fi pregătit pentru un job în domeniul IT.
+                </p>
+            </div>
+            <div class="fea-box">
+                <i class="fa fa-solid fa-comment"></i>
+                <h3>FEEDBACK CONSTANT</h3>
+                <p>Pentru a ști ce să îmbunătățești, ai nevoie de păreri profesioniste. Trainerii noștri te vor ajuta în
+                    acest sens și se vor asigura că lucrurile merg în direcția bună.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Sectiunea de final de pagina-->
+
+    <footer>
+        <div class="copyright">
+            <div class="links">
+                <a href="https://www.facebook.com/"><i class="fa fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/"></a><i class="fa fa-brands fa-twitter"></i></a>
+                <a href="https://linkedin.com/"></a><i class="fa fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/"></a><i class="fa fa-brands fa-github"></i></a>
+            </div>
+            <h4>Copyright @2023 All rights reserved</h4>
+        </div>
+
+    </footer>
+</body>
+
+</html>
