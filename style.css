@@ -491,13 +491,13 @@ footer .copyright .links i:hover {
 #contact .form button {
   font-size: 0.9rem;
   padding: 13px 25px;
-  background: var(--yellow);
+  background: var(--third-color);
   border-radius: 5px;
   outline: none;
   border: none;
   font-weight: 600;
   cursor: pointer;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 /**********************************Responsive*****************************/
