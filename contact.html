@@ -2,15 +2,16 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DY2RJDPKQL"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLTMVFCK5F"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-DY2RJDPKQL');
+  gtag('config', 'G-KLTMVFCK5F');
 </script>
+
 
 
     <meta charset="UTF-8">
@@ -98,7 +99,7 @@
             </div>
 
             <div class="form-col">
-                <button>Trimite mesaj</button>
+                <button onclick="buttonColor()" id="button">Trimite mesaj</button>
             </div>
 
         </div>
@@ -121,8 +122,20 @@
 
     </footer>
 
-    <!--JS pentru dark/light mode-->
+
+  
+
+    
     <script>
+
+//JS pentru schimbare culoare buton dupa apasare
+    function buttonColor(){
+            document.getElementById("button").style.backgroundColor='#d45500';
+        }
+
+
+//JS pentru dark/light mode
+        
         var icon = document.getElementById("icon");
 
         icon.onclick = function () {
