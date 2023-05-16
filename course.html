@@ -4,14 +4,14 @@
 <head>
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLTMVFCK5F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLTMVFCK5F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-KLTMVFCK5F');
-</script>
+        gtag('config', 'G-KLTMVFCK5F');
+    </script>
 
 
     <meta charset="UTF-8">
@@ -58,7 +58,7 @@
         <div class="course-box">
 
 
-            <div class="courses">
+            <div class="courses" data-clicks="0">
                 <img src="images/c5.jpg" alt="">
                 <div class="details">
                     <span>Postat 08/05/2023 </span>
@@ -76,7 +76,7 @@
             </div>
 
 
-            <div class="courses">
+            <div class="courses" data-clicks="0">
                 <img src="images/c6.jpg" alt="">
                 <div class="details">
                     <span>Postat 12/04/2023 </span>
@@ -94,7 +94,7 @@
             </div>
 
 
-            <div class="courses">
+            <div class="courses" data-clicks="0">
                 <img src="images/c9.jpg" alt="">
                 <div class="details">
                     <span>Postat 22/03/2023 </span>
@@ -112,7 +112,7 @@
             </div>
 
 
-            <div class="courses">
+            <div class="courses" data-clicks="0">
                 <img src="images/c10.jpg" alt="">
                 <div class="details">
                     <span>Postat 08/03/2023 </span>
@@ -132,7 +132,7 @@
             </div>
 
 
-            <div class="courses">
+            <div class="courses" data-clicks="0">
                 <img src="images/c7.jpg" alt="">
                 <div class="details">
                     <span>Postat 22/02/2023 </span>
@@ -152,7 +152,7 @@
             </div>
 
 
-            <div class="courses">
+            <div class="courses" data-clicks="0">
                 <img src="images/c11.jpg" alt="">
                 <div class="details">
                     <span>Postat 20/02/2023 </span>
@@ -171,7 +171,7 @@
             </div>
 
 
-            <div class="courses">
+            <div class="courses" data-clicks="0">
                 <img src="images/c1.jpg" alt="">
                 <div class="details">
                     <span>Postat 15/02/2023 </span>
@@ -191,7 +191,7 @@
             </div>
 
 
-            <div class="courses">
+            <div class="courses" data-clicks="0">
                 <img src="images/c5.jpg" alt="">
                 <div class="details">
                     <span>Postat 01/02/2023 </span>
@@ -211,7 +211,7 @@
             </div>
 
 
-            <div class="courses">
+            <div class="courses" data-clicks="0">
                 <img src="images/c3.jpg" alt="">
                 <div class="details">
                     <span>Postat 28/01/2023 </span>
@@ -234,7 +234,7 @@
 
     </section>
 
-<!--Sectiunea de final pagina-->
+    <!--Sectiunea de final pagina-->
     <footer>
         <div class="copyright">
             <div class="links">
@@ -249,8 +249,11 @@
 
     </footer>
 
-    <!--JS pentru dark/light mode-->
+    <!--JS -->
     <script>
+
+        //Pentru dark/light mode
+
         var icon = document.getElementById("icon");
 
         icon.onclick = function () {
@@ -263,6 +266,35 @@
             }
 
         }
+
+        //Contorizare accesare controale (cursurile care au fost apasate mai des apar mai sus) 
+
+        var containers = document.querySelectorAll('.courses');
+
+        containers.forEach(function (container) {
+            var image = container.querySelector('img');
+            var clickCount = parseInt(container.dataset.clicks || 0);
+
+            image.addEventListener('click', function () {
+                container.dataset.clicks = ++clickCount;
+                sortContainers();
+            });
+        });
+
+        function sortContainers() {
+            var containerArray = Array.from(containers);
+
+            containerArray.sort(function (a, b) {
+                return (parseInt(b.dataset.clicks) || 0) - (parseInt(a.dataset.clicks) || 0);
+            });
+
+            var parent = containerArray[0].parentNode;
+            containerArray.forEach(function (container) {
+                parent.appendChild(container);
+            });
+        }
+
+
     </script>
 
 </body>

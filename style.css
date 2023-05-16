@@ -382,6 +382,7 @@ footer .copyright .links i:hover {
   height: 50%;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 
 #course .courses .details {
