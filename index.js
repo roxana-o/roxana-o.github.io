@@ -84,31 +84,39 @@ const validateInputs = () => {
   }
 };
 
-//Countdown inregistrare pentru promotie
+// Countdown înregistrare pentru promoție
 
-//display start time
-const date_time1 = new Date("December 31, 2024 02:04:330").getTime();
-var f_fun = setInterval(function () {
-  //display end time
-  const date_time2 = new Date().getTime();
-  //show the difference between start and end time
-  const time_var = date_time1 - date_time2;
-  //convert difference time in days
-  const days_data = Math.floor(time_var / (1000 * 60 * 60 * 24));
-  //convert difference time in hours
-  const hours_data = Math.floor(
-    (time_var % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  //convert difference time in minutes
-  const minutes_data = Math.floor((time_var % (1000 * 60 * 60)) / (1000 * 60));
-  //convert difference time in the second
-  const seconds_data = Math.floor((time_var % (1000 * 60)) / 1000);
-  //display countdown timer
-  document.getElementById("day_value").innerHTML = days_data;
-  document.getElementById("hour_value").innerHTML = hours_data;
-  document.getElementById("minute_value").innerHTML = minutes_data;
-  document.getElementById("second_value").innerHTML = seconds_data;
-}, 5);
+// Setează data de sfârșit a promoției
+const endDate = new Date("December 31, 2024 02:04:33").getTime();
+
+// Functie de actualizare a countdown-ului
+function updateCountdown() {
+  const now = new Date().getTime();
+  const timeRemaining = endDate - now;
+
+  // Verifică dacă timpul rămas este pozitiv
+  if (timeRemaining > 0) {
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+    document.getElementById("day_value").innerHTML = days;
+    document.getElementById("hour_value").innerHTML = hours;
+    document.getElementById("minute_value").innerHTML = minutes;
+    document.getElementById("second_value").innerHTML = seconds;
+  } else {
+    // Afișează un mesaj când promoția a expirat
+    document.getElementById("clocks").innerHTML = "Promoția a expirat!";
+    clearInterval(interval);
+  }
+}
+
+// Actualizează countdown-ul la fiecare secundă
+const interval = setInterval(updateCountdown, 1000);
+
+// Apel inițial pentru a seta valorile imediat
+updateCountdown();
 
 
 
