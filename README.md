@@ -1,9 +1,12 @@
 # InnovateIT - Programming Courses
 
 ## Overview
-InnovateIT is a web application designed to promote a community offering programming courses for both beginners and advanced learners. The application features four distinct pages: Home, About Us, Courses, and Contact. The user interface is simple and easy to use, allowing users to register for 10 free courses, leave messages, and obtain various information about the available courses, including their prices, the reasons for taking them, and ways to contact the team for any questions or inquiries.
+InnovateIT is a website designed to promote a community offering programming courses for both beginners and advanced learners. The application features four distinct pages: Home, About Us, Courses, and Contact. The user interface is simple and easy to use, allowing users to register for 10 free courses, leave messages, and obtain various information about the available courses, including their prices, the reasons for taking them, and ways to contact the team for any questions or inquiries.
 
-![image](https://github.com/user-attachments/assets/12353757-2b07-4fa3-8cf1-1a1820302c77)
+#### *This project is a static website and can be visited here: https://roxana-o.github.io/ .*
+
+![image](https://github.com/user-attachments/assets/9e33c6d9-e48d-4810-91c8-c65a3f7eb0bb)
+
 
 ## Heuristic Principles
 The application follows the 10 heuristic principles for user interface design:
@@ -21,7 +24,8 @@ The system communicates with users in their usual language, using familiar phras
 #### *3. User Control and Freedom*:
 Users can personalize the background by choosing between a light theme (by pressing the sun icon in the navigation bar) or a dark theme (by pressing the moon icon in the navigation bar).
 
-![image](https://github.com/user-attachments/assets/d312d462-17b6-4bb5-b81a-8447b56f0661)
+![image](https://github.com/user-attachments/assets/c64a91de-e0e6-44d5-b2db-9965d313d5a6)
+
 
 #### *4. Aesthetic and Minimalist Design*:
 The content and visual design focus on essential elements, avoiding unnecessary distractions from the information the user truly needs.
