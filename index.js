@@ -87,7 +87,7 @@ const validateInputs = () => {
 //Countdown inregistrare pentru promotie
 
 //display start time
-const date_time1 = new Date("May 31, 2023 02:04:330").getTime();
+const date_time1 = new Date("December 31, 2024 02:04:330").getTime();
 var f_fun = setInterval(function () {
   //display end time
   const date_time2 = new Date().getTime();
